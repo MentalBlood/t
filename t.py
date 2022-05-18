@@ -35,7 +35,7 @@ class Figure():
             dot1, dot2 = [(self.dots[binding[0]][i] + self.c[i]) for i in range(self.n)], [(self.dots[binding[1]][i] + self.c[i]) for i in range(self.n)]
             if PERSPECT:
                 dot1, dot2 = perspect(dot1, 470), perspect(dot2, 470)
-            painter.drawLine(dot1[0] + self.c_c[0], dot1[1] + self.c_c[1], dot2[0] + self.c_c[0], dot2[1] + self.c_c[1])
+            painter.drawLine(int(dot1[0] + self.c_c[0]), int(dot1[1] + self.c_c[1]), int(dot2[0] + self.c_c[0]), int(dot2[1] + self.c_c[1]))
         if self.connected:
             for f in self.connected: f[0].draw(painter)
     def accelerate(self):
